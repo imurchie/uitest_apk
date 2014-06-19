@@ -1,8 +1,6 @@
-# Settings
+# UITest
 
-Toggle settings in Android device or emulator.
-
-A small and simple Android application that deals with the system settings. Then the application shuts down.
+A very small Android app into which I can insert elements in order to test their automatability.
 
 ## Requirements
 
@@ -33,47 +31,6 @@ To uninstall:
 ```shell
 $ adb uninstall io.appium.settings
 ```
-
-## Running
-
-Once installed on a device, you can change the `wifi` and `data` settings through the following commands:
-
-To turn on `wifi`:
-
-```shell
-$ adb shell am start -n io.appium.settings/.Settings -e wifi on
-```
-
-To turn off `wifi`:
-
-```shell
-$ adb shell am start -n io.appium.settings/.Settings -e wifi off
-```
-
-To turn on `data`:
-
-```shell
-$ adb shell am start -n io.appium.settings/.Settings -e data on
-```
-
-To turn off `data`:
-
-```shell
-$ adb shell am start -n io.appium.settings/.Settings -e data off
-```
-
-The two can be changed at the same time, as well:
-
-```shell
-$ adb shell am start -n io.appium.settings/.Settings -e wifi on -e data off
-```
-
-Voila!
-
-
-## Caveats
-
-There are certain system services which cannot be accessed through an application. Two ones central here are `airplane_mode` and `gps`.
 
 ## License
 
